@@ -22,15 +22,16 @@ If you are experiencing issues, please make sure you have the latest versions.
 ### Install External Dependencies
 
 External Requirements:
-- Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
-- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
-- Clipboard tool (xclip/xsel/win32yank or other depending on platform)
-- A [Nerd Font](https://www.nerdfonts.com/): optional, provides various icons
-  - if you have it set `vim.g.have_nerd_font` in `init.lua` to true
-- Language Setup:
-  - If you want to write Typescript, you need `npm`
-  - If you want to write Golang, you will need `go`
-  - etc.
+
+* Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
+* [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+* Clipboard tool (xclip/xsel/win32yank or other depending on platform)
+* A [Nerd Font](https://www.nerdfonts.com/): optional, provides various icons
+  * if you have it set `vim.g.have_nerd_font` in `init.lua` to true
+* Language Setup:
+  * If you want to write Typescript, you need `npm`
+  * If you want to write Golang, you will need `go`
+  * etc.
 
 > **NOTE**
 > See [Install Recipes](#Install-Recipes) for additional Windows and Linux specific notes
@@ -64,6 +65,7 @@ too - it's ignored in the kickstart repo to make maintenance easier, but it's
 [recommmended to track it in version control](https://lazy.folke.io/usage/lockfile).
 
 #### Clone kickstart.nvim
+
 > **NOTE**
 > If following the recommended step above (i.e., forking the repo), replace
 > `nvim-lua` with `<your_github_username>` in the commands below
@@ -80,13 +82,13 @@ git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HO
 
 If you're using `cmd.exe`:
 
-```
+```bash
 git clone https://github.com/nvim-lua/kickstart.nvim.git "%localappdata%\nvim"
 ```
 
 If you're using `powershell.exe`
 
-```
+```bash
 git clone https://github.com/nvim-lua/kickstart.nvim.git "${env:LOCALAPPDATA}\nvim"
 ```
 
@@ -122,9 +124,11 @@ examples of adding popularly requested plugins.
   * Yes! You can use [NVIM_APPNAME](https://neovim.io/doc/user/starting.html#%24NVIM_APPNAME)`=nvim-NAME`
     to maintain multiple configurations. For example, you can install the kickstart
     configuration in `~/.config/nvim-kickstart` and create an alias:
-    ```
+
+    ```bash
     alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
     ```
+
     When you run Neovim using `nvim-kickstart` alias it will use the alternative
     config directory and the matching local directory
     `~/.local/share/nvim-kickstart`. You can apply this approach to any Neovim
